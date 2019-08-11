@@ -23,15 +23,31 @@
     "eslint-plugin-react": "^7.14.3"
   },
   "eslintConfig": {
-    "extends": ["eslint-config-airbnb"],
+    "extends": [
+      "eslint-config-airbnb"
+    ],
     "overrides": [
       {
-        "files": ["**/*.js?(x)"]
+        "files": [
+          "**/*.js?(x)"
+        ]
       }
     ],
     "env": {
       "browser": true,
       "node": true
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
