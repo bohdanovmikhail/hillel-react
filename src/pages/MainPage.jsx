@@ -38,6 +38,15 @@ export default class MainPage extends React.Component {
   render() {
     return (
       <div className={'wrapper-phone-book'}>
+        <div className="wrapper-title">
+          <div className="title-name">
+            <span className="column">Full name</span>
+            <span className="column">Telephon number</span>
+          </div>
+          <div className="title-actions">
+            <span className="column">Actions</span>
+          </div>
+        </div>
         {this.getContactList()}
       </div>
     );
