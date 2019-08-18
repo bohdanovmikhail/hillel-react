@@ -2,3 +2,73 @@
   color: silver;
   text-decoration: none;
 }
+.wrapper-phone-book {
+  border: 3px solid #4682B4;}
+.contact-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-self: flex-start;
+  border-bottom: 2px solid #6caee6;
+}
+.contact-item:last-child {
+  border-bottom: none;
+}
+a {
+  text-decoration: none;
+}
+.column:not(:last-child) {
+  border-right: 2px solid #4682B4;
+}
+.column {
+  padding: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+.actions.column {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+.actions .button {
+  width: 50%;
+}
+.button {
+  border: none;
+  transition: 0.3s;
+  background: #b8d9f5;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.button:hover {
+  background: #158ced;
+  color: #fff;
+}
+.button:hover,
+.button:active,
+.button:focus {
+  outline: none;
+}
+.edit {
+  border-right: 1px solid #6caee6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-item a {
+  transition: 0.3s;
+}
+.contact-item a:hover {
+  opacity: 0.7;
+}
+.contact-item-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-right: 2px solid #4682B4;
+}
+.formAdded {
+  display: none;
+}
+.formAdded.active {
+  display: block;
+}

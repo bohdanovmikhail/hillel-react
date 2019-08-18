@@ -8,25 +8,36 @@ import Contact from '../types/Contact';
 
 export default class MainPage extends React.Component {
   getContactList() {
-    const { contacts } = this.props;
+    const {contacts} = this.props;
+
+    console.log(contacts);
+
+    if (contacts.length == 0) {
+      return (
+          <div>
+            <span>Записная книга еще пуста</span>
+          </div>
+      )
+    }
 
     return contacts.map((contact, i) => {
       const index = i;
 
       return (
-        <Link
-          key={index}
-          to={`/edit/${i}`}
-        >
-          <ContactRecord contact={contact} />
-        </Link>
+        <div className="contact-item">
+          <ContactRecord contact={contact}/>
+          <div className={'actions column'}>
+            <Link key={index} to={`/edit/${i}`} className="button edit">&#10000;</Link>
+            <button className="button remove" onClick={this.props.onDeleteContact}>&#10006;</button>
+          </div>
+        </div>
       );
     });
   }
 
   render() {
     return (
-      <div>
+      <div className={'wrapper-phone-book'}>
         {this.getContactList()}
       </div>
     );

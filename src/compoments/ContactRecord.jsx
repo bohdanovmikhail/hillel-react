@@ -6,17 +6,27 @@ export default class ContactRecord extends React.Component {
     const { contact } = this.props;
 
     return (
-      <span>
-        <b>FIO:</b>
-        {contact.fio}
+        <span className={'name column'}>
+          {contact.fio}
+        </span>
+    );
+  }
+
+  getPhone() {
+    const { contact } = this.props;
+
+    return (
+      <span className={'phone column'}>
+        {contact.phone}
       </span>
     );
   }
 
   render() {
     return (
-      <div>
+      <div className={'contact-item-left'}>
         {this.getFIO()}
+        {this.getPhone()}
       </div>
     );
   }
