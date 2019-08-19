@@ -10,12 +10,10 @@ export default class MainPage extends React.Component {
   getContactList() {
     const {contacts} = this.props;
 
-    console.log(contacts);
-
     if (contacts.length == 0) {
       return (
           <div>
-            <span>Записная книга еще пуста</span>
+            <span className='is-empty'>Записная книга еще пуста</span>
           </div>
       )
     }

@@ -1,3 +1,12 @@
+a:visited,
+a.active,
+a {
+  color: #000;
+}
+.is-empty {
+  padding: 50px 10px;
+  display: block;
+}
 .wrapper-phone-book {
   border: 3px solid #4682B4;}
 .contact-item {
@@ -64,8 +73,11 @@ a {
 }
 .formAdded {
   display: none;
+  font-weight: bold;
+  color: green;
+  margin-top: 20px;
 }
-.formAdded.active {
+.formAdded.reload {
   display: block;
 }
 .check-input {
@@ -109,16 +121,15 @@ a {
 .wrapper-form {
   padding: 10px 25px;
 }
-.form {
+.wrapper-inputs {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 input,
 button{
   border: 2px solid #4682B4;
   padding: 10px;
-  width: 45%;
+  box-sizing: border-box;
 }
 .wrapper-form button {
   width: 100%;
@@ -138,4 +149,10 @@ button{
 }
 .input-error {
   border-color: red;
+}
+.wrapper-inputs .input {
+  width: 45%;
+}
+.wrapper-inputs input {
+  width: 100%;
 }
