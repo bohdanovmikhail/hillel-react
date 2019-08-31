@@ -1,4 +1,213 @@
-.active {
-  color: silver;
-  text-decoration: none;
+/* App.jsx*/
+
+a:visited, a.active, a {
+    color: #1d1d1d;
+    text-decoration: none;
 }
+.Navigation {
+    padding: 0;
+    display: flex;
+    margin: 10px;
+}
+.Navigation a {
+    padding: 10px 15px;
+    transition: 0.5s;
+    display: block;
+    margin: 0 auto;
+}
+.main-icon-active {
+    background-image: url("./img/main-1.png");
+    width: 30px;
+    height: 40px;
+    background-size: cover;
+}
+.main-icon-active:hover {
+    background-image: url("./img/main-2.png");
+    width: 30px;
+    height: 40px;
+    background-size: cover;
+}
+.add-icon-active {
+    background-image: url("./img/add-1.png");
+    width: 30px;
+    height: 40px;
+    background-size: cover;
+}
+.add-icon-active:hover {
+    background-image: url("./img/add-2.png");
+    width: 30px;
+    height: 40px;
+    background-size: cover;
+}
+
+/* MainPage.jsx */
+
+.contacts {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-self: flex-start;
+    border-bottom: 2px solid #00080c;
+}
+.contacts:last-child {
+    border-bottom: none;
+}
+.empty {
+    margin: 0 auto;
+    height: 412px;
+    width: 412px;
+    background-image: url("./img/1.png");
+    background-size: cover;
+    display: block;
+}
+.MainPageBook {
+    border: 4px solid #00080c;
+    margin: 0 10px 0 10px;
+}
+.MainPageBook__title {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    text-align: center;
+    border-bottom: 3px solid #00080c;
+    font-weight: bold;
+}
+.MainPageBook__title-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-right: 2px solid #00080c;
+}
+.column {
+    padding: 10px;
+}
+.column:not(:last-child) {
+    border-right: 2px solid #00080c;
+}
+.MainPageBook__title-edit {
+    padding-top: 10px;
+}
+.MainPageBook__edit.column {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+.MainPageBook__edit .button {
+    width: 50%;
+}
+.edit {
+    background-image: url("./img/edit-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 37px;
+    height: 37px;
+}
+.edit:hover, .edit:active, .edit:focus {
+    background-image: url("./img/edit-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+}
+.remove {
+    background-image: url("./img/del-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border-color: transparent transparent transparent #00080c;
+    cursor: pointer;
+}
+.remove:hover, .remove:active, .remove:focus {
+    background-image: url("./img/del-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+/* AddEditForm.jsx */
+
+.EditForm {
+    padding: 10px 25px;
+}
+input {
+    width: 48%;
+    margin-top: 5px;
+    border: 2px solid #00080c;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.save-button-wrapper {
+    text-align: center;
+    padding-top: 5px;
+}
+.save-button {
+    background-image: url("./img/save-1.png");
+    width: 60px;
+    height: 63px;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.6s;
+    background-color: transparent;
+    border-color: transparent;
+    background-repeat: no-repeat;
+    outline: none;
+}
+.save-button:hover, .save-button:focus {
+    background-image: url("./img/save-2.png");
+    width: 60px;
+    height: 63px;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.6s;
+    background-color: transparent;
+    border-color: transparent;
+    background-repeat: no-repeat;
+    outline: none;
+}
+.check-input {
+    width: 100%;
+    margin-top: 20px;
+}
+.input-error {
+    border-color: red;
+}
+.add {
+    background-image: url("./img/add-3.png");
+    background-size: cover;
+    width: 312px;
+    height: 312px;
+    margin: 0 auto;
+}
+.formAdded {
+    display: none;
+    font-weight: bold;
+    color: #00080c;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+.formAdded.reload {
+    display: block;
+}
+.check-input {
+    display: none;
+}
+.check-input.error {
+    display: block;
+    color: red;
+}
+
+/* ContactRecord.jsx */
+
+.contact-item-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-right: 2px solid #00080c;
+}
+
+
+
+
+
+
+
+
+
